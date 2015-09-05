@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<!-- styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!--  scripts -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script src="app.js"></script>
+
+</head>
+
+<body>
+
+<div class="container" ng-app="showApp" ng-controller="mainController">
+
+    <div class="page-header text-center">
+       <h1>ngShow and ngHide: Expressions</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        <form>
+          <div class="form-group">
+            <label>Type an Animal <span class="text-muted">(cat, dog, lion, bear, turtle)</span></label>
+            <input type="text" class="form-control" ng-model="aminal">
+          </div>
+        </form>
+      </div>
+      
+      <div class="col-xs-6">
+        <img ng-src="http://i.imgur.com/vkW3Lhe.jpg" class="img-responsive img-thumbnail" ng-show="aminal == 'cat'">
+        <img ng-src="http://i.imgur.com/gjLSTqX.jpg" class="img-responsive img-thumbnail" ng-show="aminal == 'dog'">
+      </div>
+    </div>
+    
+</div>
+
+</body>
+
+</html>
